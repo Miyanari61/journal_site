@@ -1,13 +1,13 @@
-<h1>商品登録フォーム</h1>
-<%= form_with model: @article, local: true do |form| %>
+<h1>新規論文投稿</h1>
+<%= form_with model: @item, local: true do |form| %>
   <p>
-    商品名：<br>
-    <%= form.strings_field :title %>
+    論文タイトル：<br>
+    <%= form.text_field :title %>
   </p>
   <p>
-    商品詳細：<br>
+    本文：<br>
     <%= form.text_area :body %>
   </p>
   
-  <%= form.submit "登録" %>
+  <%= form.submit "投稿" %>
 <% end %>
